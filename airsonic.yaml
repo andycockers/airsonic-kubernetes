@@ -1,0 +1,27 @@
+---
+   apiVersion: apps/v1
+   kind: Deployment
+   metadata:
+     name: airsonic
+   spec:
+     replicas: 1
+     selector:
+       matchLabels:
+         app: airsonic
+     template:
+       metadata:
+         labels: 
+           app: airsonic
+       spec:
+         containers:
+         - name: airsonic
+           image: linuxserver/airsonic
+           ports:
+           - containerPort: 4040
+       env:
+       - name: PUID
+         value: 1000
+       - name: PGID
+         value: 1000
+       - name: TZ
+         value: Europe/London
