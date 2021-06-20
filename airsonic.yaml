@@ -21,6 +21,8 @@
            volumeMounts:
            - name: music
              mountPath: /music
+           - name: config
+             mountPath: /config
            env:
            - name: PUID
              value: "1000"
@@ -30,5 +32,8 @@
              value: Europe/London
          volumes:
          - hostPath:
-             path: /data/airsonic
+             path: /data/airsonic/music
            name: music
+         - hostPath:
+             path: /data/airsonic/config
+           name: config
