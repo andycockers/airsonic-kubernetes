@@ -19,7 +19,7 @@
            ports:
            - containerPort: 4040
            volumeMounts:
-           - name: "</path/to/music>"
+           - name: music
              mountPath: /music
            env:
            - name: PUID
@@ -31,4 +31,4 @@
          volumes:
          - hostPath:
              path: /data/airsonic
-           name: "</path/to/music>"
+           name: music
