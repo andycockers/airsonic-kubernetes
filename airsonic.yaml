@@ -28,6 +28,7 @@
              value: "1000"
            - name: TZ
              value: Europe/London
+         volumes:
          - hostPath:
              path: /data/airsonic
            name: </path/to/music>
