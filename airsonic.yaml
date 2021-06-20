@@ -18,6 +18,9 @@
            image: linuxserver/airsonic
            ports:
            - containerPort: 4040
+           volumeMounts:
+           - name: </path/to/music>
+             mountPath: /music
            env:
            - name: PUID
              value: "1000"
@@ -25,3 +28,6 @@
              value: "1000"
            - name: TZ
              value: Europe/London
+         - hostPath:
+             path: /data/airsonic
+           name: </path/to/music>
