@@ -19,8 +19,8 @@
            ports:
            - containerPort: 4040
            volumeMounts:
-           - name: music
-             mountPath: /music
+           - name: flac
+             mountPath: /flac
            - name: config
              mountPath: /config
            env:
@@ -32,7 +32,7 @@
              value: Europe/London
          volumes:
          - hostPath:
-             path: /data/airsonic/music
+             path: /mnt/maxtor/flac
            name: music
          - hostPath:
              path: /data/airsonic/config
