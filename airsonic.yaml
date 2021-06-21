@@ -19,7 +19,7 @@
            ports:
            - containerPort: 4040
            volumeMounts:
-           - name: flac
+           - name: music
              mountPath: /flac
            - name: config
              mountPath: /config
