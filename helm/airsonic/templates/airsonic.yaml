@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: airsonic
+  name: {{ .Values.name }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: airsonic
+      app: {{ .Values.name }}
   template:
     metadata:
       labels: 
-        app: airsonic
+        app: {{ .Values.name }}
     spec:
       containers:
-      - name: airsonic
+      - name: {{ .Values.name }}
         image: {{ .Values.image }}:{{ .Values.tag}}
         ports:
         - containerPort: 4040

@@ -1,3 +1,8 @@
 image: linuxserver/airsonic
 tag: version-v10.6.2
+name: airsonic-helm
 config_path: /data/airsonic-helm-config
+host: airsonic-test.crabdance.com
+secret: airsonic-helm-tls
+ingress: "nginx"
+cert_manager: "letsencrypt-prod"
