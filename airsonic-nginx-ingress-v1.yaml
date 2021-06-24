@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - airsonic-test.crabdance.com
+    - dracula.crabdance.com
     secretName: airsonic-tls-helm
   rules:
-  - host: airsonic-test.crabdance.com
+  - host: dracula.crabdance.com
     http:
       paths:
       - path: /
