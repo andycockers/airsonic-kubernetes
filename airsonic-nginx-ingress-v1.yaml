@@ -9,16 +9,16 @@ metadata:
 spec:
   tls:
   - hosts:
-    - airsonic.crabdance.com
-    secretName: airsonic-tls
+    - airsonic-test.crabdance.com
+    secretName: airsonic-tls-helm
   rules:
-  - host: airsonic.crabdance.com
+  - host: airsonic-test.crabdance.com
     http:
       paths:
       - path: /
         pathType: ImplementationSpecific
         backend:
          service:
-          name: airsonic
+          name: airsonic-helm
           port:
            number: 4040
