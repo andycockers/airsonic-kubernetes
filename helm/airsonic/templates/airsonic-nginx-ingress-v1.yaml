@@ -6,7 +6,6 @@ metadata:
     # use the shared ingress-nginx
     kubernetes.io/ingress.class: {{ .Values.ingress }}
     cert-manager.io/cluster-issuer: {{ .Values.cert_manager }}
-type: kubernetes.io/tls
 spec:
   tls:
   - hosts:
