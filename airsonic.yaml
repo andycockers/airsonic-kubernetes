@@ -35,5 +35,5 @@
              path: /mnt/maxtor/flac
            name: music
          - hostPath:
-             path: /data/airsonic/config
+             path: /data/airsonic-helm-config
            name: config
