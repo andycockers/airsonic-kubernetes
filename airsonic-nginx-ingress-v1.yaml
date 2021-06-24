@@ -19,6 +19,6 @@ spec:
         pathType: ImplementationSpecific
         backend:
          service:
-          name: airsonic-helm
+          name: airsonic
           port:
            number: 4040
