@@ -3,7 +3,7 @@ tag: version-v10.6.2
 name: airsonic-helm
 namespace: airsonic-helm
 config_path: /data/airsonic_helm_config
-music_path: /mnt/flac/flac
+music_path: /data/airsonic_helm_config
 host: airsonic.crabdance.com
 secret: airsonic-helm-tls
 ingress: "nginx"
