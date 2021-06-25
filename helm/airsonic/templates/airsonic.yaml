@@ -18,6 +18,9 @@ spec:
         ports:
         - containerPort: 4040
         volumeMounts:
+        - name: music
+          mountPath: /flac
+        volumeMounts:
         - name: config
           mountPath: /config
         env:
@@ -28,6 +31,9 @@ spec:
         - name: TZ
           value: Europe/London
       volumes:
+      - hostPath:
+          path: {{ .Values.music_path }}
+        name: music
       - hostPath:
           path: {{ .Values.config_path}}
         name: config
