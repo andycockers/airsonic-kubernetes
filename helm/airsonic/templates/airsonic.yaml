@@ -31,8 +31,8 @@ spec:
           value: Europe/London
       volumes:
       - hostPath:
-          path: {{ .Value.music_path }}
+          path: {{ .Values.music_path }}
         name: music
       - hostPath:
-          path: {{ .Value.config_path }}
+          path: {{ .Values.config_path }}
         name: config
