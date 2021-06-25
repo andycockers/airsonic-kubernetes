@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: {{ .Values.name }}
-        image: {{ .Values.image }}:{{ .Values.tag}}
+        image: {{ .Values.image }}:{{ .Values.tag }}
         ports:
         - containerPort: 4040
         volumeMounts:
@@ -31,8 +31,8 @@ spec:
           value: Europe/London
       volumes:
       - hostPath:
-          path: /mnt/flac/flac
+          path: {{ .Value.music_path }}
         name: music
       - hostPath:
-          path: /data/airsonic_config
+          path: {{ .Value.config_path }}
         name: config
