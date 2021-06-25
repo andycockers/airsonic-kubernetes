@@ -20,7 +20,6 @@ spec:
         volumeMounts:
         - name: music
           mountPath: /flac
-        volumeMounts:
         - name: config
           mountPath: /config
         env:
@@ -32,8 +31,8 @@ spec:
           value: Europe/London
       volumes:
       - hostPath:
-          path: {{ .Values.music_path }}
+          path: /mnt/flac/flac
         name: music
       - hostPath:
-          path: {{ .Values.config_path }}
+          path: /data/airsonic_config
         name: config
