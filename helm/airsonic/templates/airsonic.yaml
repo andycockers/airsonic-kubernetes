@@ -19,7 +19,7 @@ spec:
         - containerPort: 4040
         volumeMounts:
         - name: music
-          mountPath: /flac
+          mountPath: /music
         volumeMounts:
         - name: config
           mountPath: /config
