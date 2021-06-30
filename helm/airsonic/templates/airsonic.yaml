@@ -27,6 +27,8 @@ spec:
           value: "1000"
         - name: TZ
           value: Europe/London
+        - name: JAVA_OPTS
+          value: -Dserver.use-forward-headers=true -Xmx512m
       volumes:
       - hostPath:
           path: {{ .Values.config_path}}
