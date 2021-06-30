@@ -14,10 +14,12 @@ spec:
     spec:
       containers:
       - name: {{ .Values.name }}
-        image: {{ .Values.image }}:{{ .Values.tag}}
+        image: {{ .Values.image }}:{{ .Values.tag }}
         ports:
         - containerPort: 4040
         volumeMounts:
+        - name: music
+          mountPath: /flac
         - name: config
           mountPath: /config
         env:
@@ -31,5 +33,8 @@ spec:
           value: -Dserver.use-forward-headers=true -Xmx512m
       volumes:
       - hostPath:
-          path: {{ .Values.config_path}}
+          path: {{ .Values.music_path }}
+        name: music
+      - hostPath:
+          path: {{ .Values.config_path }}
         name: config

@@ -32,8 +32,8 @@
              value: Europe/London
          volumes:
          - hostPath:
-             path: /mnt/maxtor/flac
+             path: /mnt/flac/flac
            name: music
          - hostPath:
-             path: /data/airsonic-helm-config
+             path: /data/airsonic_helm_config_kubectl
            name: config
