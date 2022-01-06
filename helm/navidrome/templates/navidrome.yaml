@@ -19,7 +19,7 @@ spec:
         - containerPort: 4533
         volumeMounts:
         - name: music
-          mountPath: /flac
+          mountPath: /music
         - name: data
           mountPath: /data
         env:
