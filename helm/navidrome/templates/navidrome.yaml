@@ -28,15 +28,15 @@ spec:
         - name: PGID
           value: "1000"
         - name: ND_ENABLEDOWNLOADS
-          value: false
+          value: "false"
         - name: ND_SCANSCHEDULE
           value: "0"
         - name: ND_ENABLETRANSCODINGCONFIG
-          value: true
+          value: "true"
         - name: ND_LASTFM_ENABLED
-          value: false
+          value: "false"
         - name: ND_LISTENBRAINZ_ENABLED
-          value: false
+          value: "false"
       volumes:
       - hostPath:
           path: {{ .Values.music_path }}
