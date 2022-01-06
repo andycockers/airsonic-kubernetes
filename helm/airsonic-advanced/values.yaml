@@ -1,10 +1,10 @@
 image: airsonicadvanced/airsonic-advanced
 tag: latest
-name: airsonic-helm
-namespace: airsonic-helm
-data_path: /data/airsonic_helm_config
+name: airsonic-advanced
+namespace: airsonic-advanced
+data_path: /data/airsonic_advanced
 music_path: /mnt/flac
-host: airsonic.crabdance.com
-secret: airsonic-helm-tls
+host: airsonic-advanced.crabdance.com
+secret: airsonic-advanced-helm-tls
 ingress: "nginx"
 cert_manager: "letsencrypt-prod"
