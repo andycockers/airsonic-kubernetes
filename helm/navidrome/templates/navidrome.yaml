@@ -32,7 +32,7 @@ spec:
         - name: ND_SCANSCHEDULE
           value: "0"
         - name: ND_ENABLETRANSCODINGCONFIG
-          value: "true"
+          value: "false"
         - name: ND_LASTFM_ENABLED
           value: "false"
         - name: ND_LISTENBRAINZ_ENABLED
