@@ -21,4 +21,4 @@ spec:
          service:
           name: {{ .Values.name }}
           port:
-           number: 4747
+           number: 80
