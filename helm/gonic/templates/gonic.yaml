@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.name }}
+  template:
+    metadata:
+      labels: 
+        app: {{ .Values.name }}
+    spec:
+      containers:
+      - name: {{ .Values.name }}
+        image: {{ .Values.image }}:{{ .Values.tag }}
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: music
+          mountPath: /music
+        - name: data
+          mountPath: /data
+        env:
+        - name: PUID
+          value: "1000"
+        - name: PGID
+          value: "1000"
+      volumes:
+      - hostPath:
+          path: {{ .Values.music_path }}
+        name: music
+      - hostPath:
+          path: {{ .Values.data_path }}
+        name: data

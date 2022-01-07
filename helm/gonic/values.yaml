@@ -1,0 +1,10 @@
+image: sentriz/gonic
+tag: latest
+name: gonic
+namespace: gonic
+data_path: /data/gonic
+music_path: /mnt/flac
+host: gonic.crabdance.com
+secret: gonic-helm-tls
+ingress: "nginx"
+cert_manager: "letsencrypt-prod"
