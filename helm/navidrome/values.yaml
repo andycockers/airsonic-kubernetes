@@ -3,7 +3,7 @@ tag: latest
 name: navidrome
 namespace: navidrome
 data_path: /data/navidrome
-music_path: /mnt/flac
+music_path: /mnt/music/flac
 host: navidrome.crabdance.com
 secret: navidrome-helm-tls
 ingress: "nginx"
